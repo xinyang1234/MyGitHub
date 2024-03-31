@@ -5,4 +5,7 @@
     <color name="gray">#625B71</color>
     <color name="oneBlack">#161B22</color>
     <color name="twoBlack">#0D1117</color>
+    <color name="blue_light">#9FD7FF</color>
+    <color name="pink">#FF00D6</color>
+    <color name="red_light">#FF005C</color>
 </resources>

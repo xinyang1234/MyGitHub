@@ -1,122 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
+    layout_width="match_parent"
+    layout_height="match_parent"
     tools:context=".ui.DetailUserGithubActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        android:orientation="vertical">
+        android:fillViewport="true">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/oneBlack"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
-
-            <ImageView
-                android:id="@+id/arrowback"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:src="@drawable/arrow_back_ios_24px" />
-
-        </androidx.appcompat.widget.Toolbar>
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/image_detail"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="70dp"
-            android:padding="8dp"
-            android:src="@drawable/imagesavatar" />
-
-        <TextView
-            android:id="@+id/Full_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:text="@string/full_name"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/User_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="15dp"
-            android:text="@string/user_name"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:textStyle="bold" />
-
-        <RelativeLayout
-            android:id="@+id/layer2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/my_followers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="10dp"
-                android:text="@string/Followers"
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/my_following"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginBottom="10dp"
-                android:text="@string/Following"
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-        <ProgressBar
-            android:id="@+id/progressLoader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:visibility="gone" />
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white" />
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/view_pager"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tabs" />
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
-</ScrollView>
+                <ImageView
+                    android:id="@+id/arrowback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/arrow_back_ios_24px" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_detail"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:outlineSpotShadowColor="@color/white"
+                app:civ_circle_background_color="@color/white"
+                android:outlineAmbientShadowColor="@color/white"
+                app:civ_border_color="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="70dp"
+                android:padding="8dp"
+                android:src="@drawable/imagesavatar" />
+
+            <TextView
+                android:id="@+id/Full_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/full_name"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/User_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/user_name"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/layer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/my_followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/Followers"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/my_following"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/Following"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progressLoader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="gone" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabTextColor="@color/black"
+                android:background="@color/white" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tabs" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FavButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:outlineAmbientShadowColor="@color/pink"
+        app:rippleColor="@color/pink"
+        android:outlineSpotShadowColor="@color/pink"
+        app:backgroundTint="@color/red_light"
+        android:src="@drawable/baseline_favorite_border_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

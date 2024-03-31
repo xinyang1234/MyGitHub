@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.MyGitHub" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/oneBlack</item>
+        <item name="colorPrimary">@color/red_light</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/gray</item>
