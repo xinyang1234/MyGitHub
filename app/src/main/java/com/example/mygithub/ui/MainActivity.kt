@@ -1,11 +1,13 @@
 package com.example.mygithub.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mygithub.R
 import com.example.mygithub.adapter.UserAdapter
 import com.example.mygithub.data.response.ItemsItem
 import com.example.mygithub.databinding.ActivityMainBinding
@@ -63,6 +65,22 @@ class MainActivity : AppCompatActivity() {
                     mainViewModel.findUsers(username)
                     false
                 }
+            searchBar.inflateMenu(R.menu.option_menu)
+            searchBar.setOnMenuItemClickListener { menuItem ->
+                when (menuItem.itemId){
+                    R.id.menu1 -> {
+                        val intent = Intent(this@MainActivity, FavoriteActivity::class.java)
+                        startActivity(intent)
+                        true
+                    }
+                    R.id.menu2 -> {
+                        val intent = Intent(this@MainActivity, ThemesActivity::class.java)
+                        startActivity(intent)
+                        true
+                    }
+                    else -> false
+                }
+            }
         }
     }
 
